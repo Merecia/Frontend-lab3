@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path')
 
 module.exports = {
@@ -18,16 +19,36 @@ module.exports = {
     plugins: [
 
         new HtmlWebpackPlugin({
-            title: 'Главная страница',
+            title: 'Обо мне',
             template: path.resolve(__dirname, './src/pages/index.html'),
             filename: 'index.html'
         }),
 
         new HtmlWebpackPlugin({
-            title: 'Обо мне',
-            template: path.resolve(__dirname, './src/pages/about.html'),
-            filename: 'about.html'
+            title: 'Последние новости',
+            template: path.resolve(__dirname, './src/pages/news.html'),
+            filename: 'news.html'
         }),
+
+        new HtmlWebpackPlugin({
+            title: 'Фотоальбом',
+            template: path.resolve(__dirname, './src/pages/photo.html'),
+            filename: 'photo.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            title: 'Моё расписание',
+            template: path.resolve(__dirname, './src/pages/rozklad.html'),
+            filename: 'rozklad.html'
+        }),
+
+        new CopyWebpackPlugin(
+            {
+                patterns: [
+                    { from: 'src/assets/images', to: 'images' }
+                ]
+            }
+        ),
 
         new CleanWebpackPlugin(),
 
