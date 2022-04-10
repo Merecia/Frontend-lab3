@@ -1,64 +1,57 @@
-<!-- src/template.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
 </head>
 
-<style>
-    body {
-        background: #F9F6F1;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    #root {
-        background: white;
-        box-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-        padding: 40px 30px;
-        border-radius: 10px;
-        margin: 80px auto;
-        width: 450px;
-        border: 1px solid black;
-    }
-    
-    h1 {
-        font-size: 26px;
-        margin: 0;
-        text-align: center;
-    }
-    
-    .info {
-        margin: 40px 0px 50px 0px;
-    }
-    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    a:hover {
-        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
-        border-bottom: 1px solid blue;
-    }
-</style>
-
 <body>
-    <div id="root">
 
-        <h1> Главная страница </h1>
+    <header>
+        <h1> Личная страница </h1>
+        <h1> Писклов Александр </h1>
+    </header>
 
-        <div class="info">
-            <p> ФИО: Писклов Александр Дмитриевич </p>
-            <p> Курс: 3 </p>
-            <p> Специальность: Программная инженерия </p>
-        </div>
+    <nav>
+        <ul>
+            <li> <a href="rozklad.html"> Моё расписание </a> </li>
+            <li> <a href="photo.html"> Фотоальбом </a> </li>
+            <li> <a href="news.html"> Последние новости </a> </li>
+        </ul>
+    </nav>
 
-        <a href="about.html"> Перейти на следующую страницу </a>
+    <main>
+        <h2> О себе </h2>
 
-    </div>
+        <p>
+            Меня зовут Писклов Александр. Мне 19 лет.
+            Я студент третьего курса Запорожского национального университета.
+            Учусь на математическом факультете, специальность - Программная инженерия.
+        </p>
+
+        <h2> Моё фото </h2>
+        <img src="/images/myPhoto.jpg" alt="myPhoto" style="width: 250px; border-radius: 28px">
+
+        <h2> Мои контакты </h2>
+        <p> Мой номер телефона: +380683815479 </p>
+        <p> Моя почта: sasha.pisklov2002@gmail.com </p>
+
+        <h2> Мои увлечения </h2>
+        <ol>
+            <li> Программирование </li>
+            <li> Спорт </li>
+            <li> Фильмы, сериалы, аниме </li>
+            <li> Книги </li>
+            <li> Музыка </li>
+        </ol>
+    </main>
+
+    <footer>
+        <p> Copyright 2022. Все права защищены </p>
+    </footer>
 
 </body>
 
